@@ -10,13 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Together Now',
       // theme: ThemeData.dark().copyWith(
       //     // primaryColor: Colors.blueGrey[900],
       //     // scaffoldBackgroundColor: Colors.blueGrey[900],
       //     ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
