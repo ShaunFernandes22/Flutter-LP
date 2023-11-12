@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:together_now_ipd/homepage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
