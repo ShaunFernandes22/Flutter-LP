@@ -8,6 +8,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // return IntroductoryPage();
-    return IntroductionScreens();
+    return const IntroductionScreens();
   }
 }

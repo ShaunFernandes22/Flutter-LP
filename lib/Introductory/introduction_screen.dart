@@ -21,7 +21,7 @@ class IntroductionScreens extends StatelessWidget {
               title: '',
               body:
                   'Together Now is more than an app; it\'s a celebration of meaningful connections',
-              image: buildImage("assets/Picture1.png", width),
+              image: buildImage("assets/Onboarding1.png", width),
               //getPageDecoration, a method to customise the page style
               decoration: getPageDecoration(),
             ),
@@ -29,7 +29,7 @@ class IntroductionScreens extends StatelessWidget {
               title: '',
               body:
                   'We believe in the power and strength that comes from knowing you\'re not alone.',
-              image: buildImage("assets/Picture2.png", width),
+              image: buildImage("assets/Onboarding2.png", width),
               //getPageDecoration, a method to customise the page style
               decoration: getPageDecoration(),
             ),
@@ -37,7 +37,7 @@ class IntroductionScreens extends StatelessWidget {
               title: '',
               body:
                   'We cherish your moments, the laughter in your stories and the unity of our large family.',
-              image: buildImage("assets/Picture3.png", width),
+              image: buildImage("assets/Onboarding3.png", width),
               //getPageDecoration, a method to customise the page style
               decoration: getPageDecoration(),
             ),
@@ -47,15 +47,20 @@ class IntroductionScreens extends StatelessWidget {
           showNextButton: true,
           showSkipButton: true,
           skip: const Text("Skip",
-              style:
-                  TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                  fontSize: 15)),
           next: const Icon(
             Icons.arrow_forward,
             color: Colors.white,
+            size: 25,
           ),
           done: const Text("Done",
-              style:
-                  TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                  fontSize: 15)),
           dotsDecorator: getDotsDecorator(),
           curve: Curves.bounceOut,
         ),
@@ -65,19 +70,9 @@ class IntroductionScreens extends StatelessWidget {
 
   //widget to add the image on screen
   Widget buildImage(String imagePath, width) {
-    // return Center(
-    //     child: Image.asset(
-    //   imagePath,
-    //   width: double.maxFinite,
-    //   height: 500,
-    // ));
-    // return FittedBox(
-    //   fit: BoxFit.fill,
-    //   child: Image.asset(imagePath),
-    // );
     return Container(
       width: width,
-      height: 500,
+      height: 400,
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
@@ -93,8 +88,10 @@ class IntroductionScreens extends StatelessWidget {
       imageFlex: 2,
       // contentMargin: EdgeInsets.zero,
       imagePadding: EdgeInsets.zero,
+      imageAlignment: Alignment.topCenter,
+      titlePadding: EdgeInsets.all(0),
       pageColor: Colors.black,
-      bodyPadding: EdgeInsets.only(top: 5, left: 20, right: 20),
+      bodyPadding: EdgeInsets.only(top: 0, left: 20, right: 20),
       // titlePadding: EdgeInsets.only(top: 50),
       bodyTextStyle: TextStyle(
           color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
